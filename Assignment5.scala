@@ -62,9 +62,9 @@ object Assignment5 {
 
     val balance = (l:List[Account]) => (l.map(x=>x.balance)).reduce((x,y)=>x+y);
 
-    val int_perc = (x:Double) => if(x > 0) x*0.05 else x*0.1
+    val int_perc = (x:Double) => if(x > 0) x*0.05 else x*0.1;
 
-    val interest = (l:List[Account]) => l.map(x=>x.deposit(int_perc(x.balance)))
+    val interest = (l:List[Account]) => l.map(x=>x.deposit(int_perc(x.balance)));
     
     println("Overdraft: "+overdraft(bank));
     println("Balance: "+balance(bank));
